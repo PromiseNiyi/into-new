@@ -2104,12 +2104,14 @@ padding: 0;
 }
 
 .sectionOne {
-  min-height: 70vh;
+  min-height: 100vh;
   padding-top: 2em;
 }
 .sectionOne .content {
-  min-height: 80vh;
+  min-height: 100vh;
   padding-top: 6em;
+  /* margin-bottom: 2em; */
+  justify-content: start;
   /* background-color: red; */
 }
 
