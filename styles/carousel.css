@@ -1,0 +1,113 @@
+.hcarousel{
+    height: 10vh;
+    /* background-color: red; */
+    display: none;
+
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos::before,
+.logos::after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos::before{
+    left: 0;
+    background: linear-gradient(to left, rgba(24, 24, 24, 0), rgb(24, 24, 24));
+
+}
+
+.logos::after{
+    right: 0;
+    background: linear-gradient(to right, rgba(24, 24, 24, 0), rgb(24, 24, 24));
+
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos-slide{
+    display: inline-block;
+    animation: 25s slide infinite linear;
+}
+.hcarousel .logos .logos-slide img{
+    height: 50px;
+    margin: 0 40px;
+}
+
+
+
+.directions{
+    height: 20vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.directions img{
+margin-top: 50px;
+}
+.directions h4{
+font-size: 30px;
+font-weight: 400;
+}
+
+.directions2{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.directions2 a h4{
+    font-size: 30px;
+    font-weight: 400;
+    cursor: pointer;
+    text-transform: capitalize;
+    }
+    
+/* /////////////////////RESIZE/////////////////////// */
+
+@media only screen and (max-width: 720px) {
+    
+    .hcarousel .logos .logos-slide img{
+        height: 40px;
+        margin: 0 40px;
+    }
+
+    .logos::before,
+.logos::after{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+}
