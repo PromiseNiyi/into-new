@@ -1197,6 +1197,239 @@ padding-top: 100px;
     transition: left 0.1s;
   }
 
+/* _______________________________Convo page stylinig ____________________________________ */
+
+.third-section{
+  color: white;
+  height: auto;
+  /* max-height: 80vh; */
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: min(30vh, 10rem) 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  
+  .third-section h2{
+      font-size: 70px;
+      margin-bottom: 100px;
+  }
+  .third-section span{
+      color: #f79202;
+  }
+  
+  .form-space{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      /* display: none; */
+      
+  }
+  .inputs{
+      
+      width: 500px;
+      display: flex;
+      align-items: bottom;
+      /* gap: 100px; */
+      height: 40px;
+      
+  }
+  .inputs label{
+      /* width: 50%; */
+      font-size: 14px;
+      color: rgb(8, 8, 8);
+  }
+  
+
+  .inputs input{
+      position: absolute;
+      /* bottom: 0; */
+      left: 45px;
+      color: #f79202;
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid rgb(15, 15, 15);
+      width: 29rem;
+      font-size: 16px;
+      /* line-height: 50px; */
+      /* height: 50px; */
+      margin: 0 0 25px 0;
+      padding-left: 15px;
+      
+  }
+
+  .inputs input:focus{
+      border-bottom-color: #f79202;
+  }
+  .inputs label:focus{
+     color: rgb(0, 255, 174);
+  }
+  
+  .input2 input{
+      left: 100px;
+      width: 25.6rem;
+  }
+  
+  .input3 input{
+      left: 68px;
+      width: 27.5rem;
+  }
+  .input4 input{
+      left: 120px;
+      width: 24.2rem;
+  }
+  .input5 input{
+      left: 130px;
+      width: 23.6rem;
+  }
+  
+  .form-space button{
+      background: none;
+      outline: none;
+      background-color: none;
+      border: none;
+      color: transparent;
+      margin: 50px 10px 50px 10px;
+      cursor: pointer;
+  }
+  
+  .form-space button img{
+      width: 150px;
+  }
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 20px 20px 3em;
+  min-height: 70vh;
+  z-index: 1000;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 3em;
+  font-weight: medium;
+  cursor: pointer;
+  color: red;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+.popup .contents{
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.popup .contents h2{
+  font-weight: bolder;
+  font-size: 45px;
+  color: #bf4c4a;
+}
+
+
+
+.card-form{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* height: 60vh; */
+  align-items: center;
+  
+}
+
+.card-form .alertcard{
+background-color: #bf4c4a;
+height: 60vh;
+width:27em ;
+border-radius: 25px;
+justify-content: space-evenly;
+display: flex;
+flex-direction: column;
+align-items: left;
+text-align: left;
+padding: 25px 50px ;
+color: #fff;
+}
+
+.alert{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+gap: 15px;
+}
+.alertcard .captions h3{
+font-size:35pt;
+margin-bottom: 25px;
+}
+
+.alertcard .captions p{
+  font-size: 12pt;
+  line-height: 20pt;
+}
+
+.alertcard .contact h6{
+  font-size: 12pt;
+}
+
+.contact img{
+  height: 12pt;
+
+}
+
+.phone-contact, .email-contact, .social-contact{
+  display: flex;
+  margin: 5px 0;
+ gap: 6px;
+
+}
+
+.client-icon{
+  gap: 15px;
+  display: flex;
+}
+.client-icon img{
+  height: 70px;
+}
+
+
+
+
+
+
+
+
 
 /* ------------------Responsiveness begins here--------------------- */
 /* ------------------------------------------------------------------ */
@@ -1398,18 +1631,43 @@ min-height: 150vh;
 
 
 
+
+
   }
 
 
   @media only screen and (max-width: 1100px) {
     /* ///////////////////convo///////////////// */
+    
+    .popup {
+      padding-bottom: 10px;
+    }
     .card-form{
         height: auto;
-        min-height: 100vh;
+        /* min-height: 10vh; */
         flex-direction: column;
-        justify-content: space-between;
+        justify-content:center;
         gap: 50px;
      }
+     .form-space button{
+      margin: 10px;
+     }
+
+     .card-form .alertcard{
+      background-color: #bf4c4a;
+      height: 40vh;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width:90%;
+    }
+    .card-form .alertcard p{
+      width: 90%;
+    }
+    .alert{
+      display: flex;
+      flex-direction: row;
+      align-items:top;
+    }
 
      /* .scroll-container {
       min-height: 1500vh;
@@ -2139,6 +2397,104 @@ padding: 0;
   /* padding-top: 4em;
   padding-bottom: 2em; */
 }
+
+.popup {
+  background-color: rgb(12, 12, 12);
+  
+}
+.popup .contents h2{
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  color: #f79202;
+  margin-top: 1em;
+}
+
+.card-form .alertcard{
+  height: auto;
+padding: 20px 30px;
+}
+
+.alertcard .captions h3{
+  font-size:35px;
+  margin-bottom: 10px;
+  }
+  .card-form .alertcard p{
+    width: 100%;
+  }
+
+.alert{
+  flex-direction: column;
+}
+
+.client-icon img{
+  height: 50px;
+}
+.card-form .alertcard{
+  display: none;
+}
+.form-space{
+  display: none;
+}
+.resize-form{
+  display: block;
+  justify-items: center;
+  opacity: 1;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  }
+
+  .resize-form .small-form{
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+      width: 350px;
+      gap: 15px;
+      align-items: center;
+      
+  }
+
+  .small-form input, .small-form textarea{
+      /* height: 40px; */
+      width: 100%;
+      max-width: 320px;
+      min-width: 300px;
+      font-size: 14px;
+      line-height: 60px;
+      padding:0 10px ;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+  
+  
+  }
+
+  .small-form textarea{
+      height: 60px;
+      min-height: 50px;
+      line-height: 25px;
+      padding-top: 20px;
+  }
+  
+
+  .resize-form button{
+      background: none;
+      border: none;
+      outline: none;
+      color: transparent;
+      margin: 20px 10px 50px 10px;
+      
+      
+  }
+  .resize-form button img{
+      margin-top: 25px;
+      width: 150px;
+      transition: all ease 0.3s;
+      cursor: pointer;
+  
+  }
 
 
 }

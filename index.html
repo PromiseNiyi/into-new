@@ -21,6 +21,7 @@
 
   <script type="text/javascript" src="scripts/pagescript.js" defer></script>
   <script type="text/javascript" src="scripts/scriptsss.js"></script>
+  <script type="text/javascript" src="scripts/convo.js"  defer></script>
 
   <link rel="shortcut icon" href="icons/favico.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
@@ -37,7 +38,7 @@
   <li class="About">About Us</li>
   <li class="Services">Services</li>
   <li class="Intox">Into<span>X</span></li>
-  <li><a class="begin-btn" href="convo.html"><img src="icons/Begin Here-01.png" alt="go-btn"></a></li>
+  <li><a class="begin-btn" onclick="showPopup()"><img src="icons/Begin Here-01.png" alt="go-btn"></a></li>
 </ul>
 
 <!-- Menu for resized screen starts -->
@@ -45,23 +46,113 @@
   <a class="menu-btn" href="#"><img src="icons/menu.png" alt="menu-btn"  id="menuToggle"></a>
  
  
-  <a class ="begin-btn" href="convo.html"><img src="icons/Begin Here-01.png" alt="go-btn"></a>
+  <a class ="begin-btn" onclick="showPopup()"><img src="icons/Begin Here-01.png" alt="go-btn"></a>
 </div>
 
 <div class="menu" id="smallMenu">
   <div class="close"><a href="#"><img src="icons/close.png" alt="close-btn" onclick="toggleMenu()"></a></div>
   
   <ul class="navigation" id="Smenu">
-  <li><a class="resize-logo" href="index.html"><img src="icons/into Logo white.png" alt="logo" id="navLogo"></a></li>
-  <li><a href="#second-sect">Projects</a></li>
-  <li><a href="#third-sect">Abouts Us</a></li>
-  <li><a href="#fourth-sect">Services</a></li>
-    <li><a href="#fifth-sect">Into<span>X</span></a></li>
+  <li><a class="resize-logo" href="index.html" onclick="closePopups()"><img src="icons/into Logo white.png" alt="logo" id="navLogo"></a></li>
+  <li><a href="#second-sect" onclick="closePopups()">Projects</a></li>
+  <li><a href="#third-sect" onclick="closePopups()">Abouts Us</a></li>
+  <li><a href="#fourth-sect" onclick="closePopups()">Services</a></li>
+    <li><a href="#fifth-sect" onclick="closePopups()">Into<span>X</span></a></li>
   </ul>
 </div>
 <!-- Menu for resized screen end -->
 
 
+<!------------------------ book convo popup----------------- -->
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()">&times;</button>
+    <div class="contents">
+      <h2> Start your journey today</h2>
+   </div>
+   <div class="card-form">
+       <div class="alertcard">
+        <div class="alert">
+          <div class="captions">
+            <h3>Begin with <br> a Call!</h3>
+            <p>We love to give the best to every 
+                and all our clients. We look forward
+                to doing amazing stuff for you.
+            </p>
+        </div>
+        <div class="contact">
+            <h6>Contact Us</h6>
+            <div class="phone-contact">
+                <img src="icons/Phone full.png" alt="phone-icon">
+                <p>07087092908</p>
+            </div>
+            <div class="email-contact">
+                <img src="icons/emailer  full.png" alt="email-icon">
+                <p>info@intocreativity.com</p>
+            </div>
+            <div class="social-contact">
+                <img src="icons/instagram full.png" alt="ig-icon">
+                <img src="icons/facebook full.png" alt="fb-icon">                    
+                <p>@intocreativity</p>
+            </div>
+        </div>
+
+        </div>
+           <div class="client-icon">
+               <img src="other logos/White StrivEquity_logo_horizontal background-01.png" alt="StriveEquity-logo">
+               <img src="other logos/iyd logo-portrait.png" alt="IYD-logo">   
+               <img src="other logos/berithor church.png" alt="SabiTribe-logo">  
+           </div>
+       </div>
+       <!-- action="submit" -->
+       <form class="form-space" >
+           <div class="inputs">
+                 <label for="Name">Name</label>
+               <input type="text" name="name" id="Name">   
+           </div>
+         
+           <div class="inputs input2">
+           <label for="email">Email Address</label>
+           <input type="email" name="email" id="email">
+           </div>
+         
+           <div class="inputs input3">
+             <label for="Company">Company</label>
+             <input type="text" name="Company" id="Company">
+           </div>
+         
+           <div class="inputs input4">
+             <label for="Service">Required Service</label>
+             <input type="text" name="Service" id="Service">
+           
+           </div>
+           
+         
+         <div class="inputs input5">
+           <label for="Availability">Availability[for call]</label>
+           <input type="tel" name="Availability" id="Availability">
+         </div>
+         
+           <button type="submit"><img src="icons/Book Convo.png" alt=""></button>
+          
+         </form>
+         <!-- form for resized screen -->
+         <div class="resize-form">
+          <!-- action="submit" -->
+           <form class="small-form">
+             <input type="name" name="name" placeholder="Name">
+             <input type="email" name="email" placeholder="Email address">
+             <input type="tex" name="Company" placeholder="Company">
+             <textarea class="textarea" name="Service" id="" cols="" rows="1" placeholder="Required Service"></textarea>
+             <input type="text" name="Service" placeholder="Availability[for call]">
+             <button type="submit"><img src="icons/Book Convo.png" alt=""></button>
+           </form>
+         </div>
+   </div>
+</div>
+
+<!------------------------ book convo popup end----------------- -->
 
 
 <div class="scroll-container" id="scrollContainer">
@@ -134,7 +225,7 @@
     <section class="third-section-projects" id="forIndex">
       <h2>Begin your journey <span>today</span> </h2>
       <div class="convo-btn">
-        <a href="convo.html"target="blank"><img src="icons/Book Convo.png" alt="book-convo"></a>
+        <a onclick="showPopup()"><img src="icons/Book Convo.png" alt="book-convo"></a>
     </div>
       
   <div class="socials indexfoot">
@@ -203,8 +294,8 @@
 </div>
 <div class="filter-buttons">
   <button onclick="filterImages('all')" id="allBtn" class="active">All</button>
-  <button onclick="filterImages('category1')" id="category1Btn">Category 1</button>
-  <button onclick="filterImages('category2')" id="category2Btn">Category 2</button>
+  <button onclick="filterImages('category1')" id="category1Btn">Recent</button>
+  <button onclick="filterImages('category2')" id="category2Btn">Older</button>
 </div>
 
 </section>
@@ -270,7 +361,7 @@
 <section class="third-section-projects">
     <h2>Begin your journey <span>today</span> </h2>
     <div class="convo-btn">
-      <a href="convo.html"target="blank"><img src="icons/Book Convo.png" alt="book-convo"></a>
+      <a onclick="showPopup()"><img src="icons/Book Convo.png" alt="book-convo"></a>
   </div>
     
 <div class="socials indexfoot">
@@ -388,7 +479,7 @@
           
       </div>
           <div class="convo-btn">
-              <a href="convo.html"><img src="icons/Book Convo.png" alt="book-convo"></a>
+              <a onclick="showPopup()"><img src="icons/Book Convo.png" alt="book-convo"></a>
           </div>
       <div class="socials indexfoot">
           <a href="#"><img src="icons/behance.png" alt="behance"></a>
@@ -572,7 +663,7 @@
               <h1>Speak to Us <span>today...</span></h1>
               
                   <div class="convo-btn">
-                      <a href="convo.html"target="blank"><img src="icons/Book Convo.png" alt="book-convo"></a>
+                      <a onclick="showPopup()"><img src="icons/Book Convo.png" alt="book-convo"></a>
                   </div>
               <div class="socials indexfoot">
                   <a href="#"><img src="icons/behance.png" alt="behance"></a>
@@ -600,7 +691,7 @@
       <h1>Speak to Us <span>today...</span></h1>
       
           <div class="convo-btn">
-              <a href="convo.html"target="blank"><img src="icons/Book Convo.png" alt="book-convo"></a>
+              <a onclick="showPopup()"><img src="icons/Book Convo.png" alt="book-convo"></a>
           </div>
       <div class="socials">
           <a href="#"><img src="icons/behance.png" alt="behance"></a>
@@ -654,6 +745,13 @@
 
   // Attach click event listener to the menu toggle image
   document.getElementById("menuToggle").addEventListener("click", toggleMenu);
+
+
+  function closePopups() {
+            smallMenu.style.display = 'none';
+            }
+
+
 </script>
 
 
