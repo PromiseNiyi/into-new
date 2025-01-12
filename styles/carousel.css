@@ -87,7 +87,7 @@ font-weight: 400;
 .directions2 a h4{
     font-size: 30px;
     font-weight: 400;
-    cursor: pointer;
+    cursor: none;
     text-transform: capitalize;
     }
     

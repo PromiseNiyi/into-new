@@ -33,18 +33,19 @@
 
 </head>
 <body>
+  <div class="cursor"></div>
 
 	<!-- <div class="custom-cursor site-wide">
 		<div class="pointer"></div>
 	</div> -->
 
 <ul class="navigations" id="menu">
-  <li class="main-logo"><img src="icons/into Logo white.png" alt="logo"></li>
-  <li class="Project">Projects</li>
-  <li class="About">About Us</li>
-  <li class="Services">Services</li>
-  <li class="Intox">Into<span>X</span></li>
-  <li><a class="begin-btn" onclick="showPopup()"><img src="icons/Begin Here-01.png" alt="go-btn"></a></li>
+  <li class="main-logo interactive"><img src="icons/into Logo white.png" alt="logo"></li>
+  <li class="Project interactive">Projects</li>
+  <li class="About interactive">About Us</li>
+  <li class="Services interactive">Services</li>
+  <li class="Intox interactive">Into<span>X</span></li>
+  <li><a class="begin-btn interactive" onclick="showPopup()"><img src="icons/Begin Here-01.png" alt="go-btn"></a></li>
 </ul>
 
 <!-- Menu for resized screen starts -->
@@ -783,6 +784,48 @@
 
 </script>
 
+
+
+<script>
+  // Select the cursor element
+  const cursor = document.querySelector('.cursor');
+
+  // Update cursor position
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+    cursor.classList.remove('hidden'); // Ensure the cursor reappears when moving
+  });
+
+  // Enlarge cursor on hover
+  const interactiveElements = document.querySelectorAll('.interactive');
+  interactiveElements.forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '40px';
+      cursor.style.height = '40px';
+      cursor.style.background = 'red';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '30px';
+      cursor.style.height = '30px';
+      cursor.style.background = '#f79202';
+    });
+  });
+
+  // Hide cursor when outside viewport
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.add('hidden');
+  });
+  document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('hidden');
+  });
+
+  // Add scroll responsiveness
+  document.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    cursor.style.transform = `translate(-50%, -50%) scale(${1 + scrollY / 1000})`;
+  });
+</script>
 
 
 </html>

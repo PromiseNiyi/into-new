@@ -18,7 +18,7 @@
     color: #fff;
     outline: none;
     margin: 0 10px;
-    cursor: pointer;
+    cursor: none;
     background-color: transparent; /* Default background color */
     transition: all ease 0.5s;
 }
@@ -93,6 +93,7 @@ color: #fff;
   height: 350px; /* Change this value to set the height of the grid items */
   overflow: hidden;
   border-radius: 20px;
+  cursor: none;
 }
 
 .image-item {
@@ -131,12 +132,16 @@ color: #fff;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(182, 15, 15, 0.48));
     opacity: 0;
     transition: opacity 0.3s ease;
+    cursor: none;
   }
 
 /* Text on hover */
 .image-item:hover::before {
   opacity: 1;
 }
+
+.grid-container a{
+cursor: none;}
 
 .grid-caption {
     position: absolute;
@@ -145,6 +150,7 @@ color: #fff;
     color: #fff;
     opacity: 0;
     transition: all 0.3s ease;
+    cursor: none;
   }
   .grid-caption h3{
     font-size: 25px;

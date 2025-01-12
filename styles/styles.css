@@ -49,6 +49,7 @@ html,body {
     background-color: rgb(24, 24, 24);
     height: auto;
     height: -webkit-fill-available;
+    cursor: none; /* Hide the default cursor */
      }
 
      body{
@@ -162,7 +163,7 @@ html,body {
     font-weight: regular;
     text-transform: uppercase;
     /* border-radius: 5px; */
-    cursor: pointer;
+    cursor: none;
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
     padding-inline:clamp(2rem,4vw, 9rem);
@@ -528,7 +529,7 @@ html,body {
   background: none;
   color: transparent;
   margin: 50px 10px 50px 10px;
-  cursor: pointer;
+  cursor: none;
   outline: none;
 }
 
@@ -559,7 +560,7 @@ grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
   /* grid-auto-flow: dense; */
   /* grid-auto-rows: 200px; */
   margin: 10px;
-  cursor: pointer;
+  cursor: none;
 }
 
 /* Grid item */
@@ -926,7 +927,7 @@ width: 100%;
   padding: 15px 35px;
   text-align: left;
   border-radius: 15px;
-  cursor: default;
+  cursor: none;
 
 }
 
@@ -1287,7 +1288,7 @@ padding-top: 100px;
       border: none;
       color: transparent;
       margin: 50px 10px 50px 10px;
-      cursor: pointer;
+      cursor: none;
   }
   
   .form-space button img{
@@ -1322,7 +1323,7 @@ padding-top: 100px;
   border: none;
   font-size: 3em;
   font-weight: medium;
-  cursor: pointer;
+  cursor: none;
   color: red;
 }
 
@@ -1800,7 +1801,7 @@ min-height: 150vh;
           padding: 15px 25px;
           text-align: center;
           border-radius: 15px;
-          cursor: default;
+          cursor: none;
        
       }
   
@@ -2485,7 +2486,7 @@ padding: 20px 30px;
       margin-top: 25px;
       width: 150px;
       transition: all ease 0.3s;
-      cursor: pointer;
+      cursor: none;
   
   }
 

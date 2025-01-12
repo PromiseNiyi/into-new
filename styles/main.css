@@ -1,38 +1,19 @@
-
-
-/* html, body {
-	cursor: none;
-} */
-
-.custom-cursor {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-	z-index: 1000;
-}
-
-.site-wide {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	border: 2px solid rgb(255, 255, 255);
-}
-
-.site-wide .pointer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-	background-color:  #f79202;
-	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
-}
-
-.site-wide.active .pointer {
-	width: 20px;
-	height: 20px;
-}
-
+    /* Custom Cursor */
+    .cursor {
+		position: fixed;
+		width: 30px;
+		height: 30px;
+		background-color: #f79202;
+		border: 5px solid #fff;
+		border-radius: 50%;
+		pointer-events: none;
+		transform: translate(-50%, -50%);
+		transition: transform  ease, width 0.1s ease, height 0.1s ease, opacity 0.1s ease;
+		z-index: 9999;
+		opacity: 1; /* Fully visible by default */
+	  }
+  
+	  /* Hide the cursor when out of viewport */
+	  .cursor.hidden {
+		opacity: 0;
+	  }
