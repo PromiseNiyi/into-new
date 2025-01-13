@@ -51,6 +51,12 @@ html,body {
     height: -webkit-fill-available;
     cursor: none; /* Hide the default cursor */
      }
+     input{
+      cursor: none;
+     }
+     .socials a{
+      cursor: none;
+     }
 
      body{
         -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
@@ -840,6 +846,9 @@ footer p{
   
 
 }
+.sectionTwo a{
+  cursor: none;
+}
 
 .sectionTwo h2{
 font-size: 50px;
@@ -1093,7 +1102,9 @@ padding-top: 100px;
  font-weight: 200;
  
 }
-
+.design .learnmore-btn a{
+  cursor: none;
+}
 .design .learnmore-btn img{
   width: 150px;
 }
